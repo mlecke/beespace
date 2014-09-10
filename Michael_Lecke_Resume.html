@@ -8,13 +8,21 @@
     <meta name="description" content="resume">
     <meta name="author" content="Michael Lecke">
 
-	<link rel="stylesheet" href="assets/css/beespace.css">
+	<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+	<link rel="stylesheet" title="main" href="assets/css/beespace.css type="text/css">
+
+	<link rel="alternate stylesheet" title="red" href="assets/css/red.css" type="text/css">
+	<link rel="alternate stylesheet" title="blue" href="assets/css/blue.css" type="text/css">
+	<link rel="alternate stylesheet" title="green" href="assets/css/green.css" type="text/css">
+	<link rel="alternate stylesheet" title="orange" href="assets/css/orange.css" type="text/css">
+	<!-- <link rel="alternate stylesheet" title="natural" href="assets/css/natural.css" type="text/css"> -->
+	<!-- <link rel="alternate stylesheet" title="hyperspace" href="assets/css/hyperspace.css" type="text/css"> -->
 
     <!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" title="bootstrap" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
 
 	<!-- Optional theme -->
-	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" title="bootstrap-theme" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
 
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
     <link rel="apple-touch-icon" href="assets/ico/apple-touch-icon.png">
@@ -283,26 +291,24 @@
 	</ul>
 
 
-	<!-- Javascript
-	================================================== -->
+	<!-- Javascript	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 
 	<!-- Google hosted API for JQUERY, JQUERY UI.
 	Remember to remove the HTTP header when copying to server
 	so Google can automatically make it work with https or http.
-	The http headers active below are only so it will work for local development from file.
+	The http headers are only so it will work for local development from file.
 
-	When deploying, replace lines below with these - no http headers.
+	AGAIN: In dev, use http: headers. When deploying, use NO http headers. -->
 	             
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
-
-	-->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+	<!-- stylesheet switcher -->
+	<script src="stylesheet-switcher.js"></script>
 
 </body>
 </html>

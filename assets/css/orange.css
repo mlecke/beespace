@@ -1,18 +1,18 @@
 /* Beespace work in progress */
-/* ORIGINAL */
+/* ORANGE */
 a:link {
-	color: #f00;
+	color: #fa6200;
 	text-decoration: underline;
 	}
 a:visited {
-	color: #c0c0c0;
+	color: #ad4807;
 	text-decoration: underline;
 	}
 body {
-	background-color: #000;
-	color: #ff0;
+	background-color: #07a7ad;
+	color: #005d61;
 }
 
 button {
-	color: black;
+	color: #fa6200;
 }
