@@ -1,0 +1,24 @@
+/* Beespace work in progress */
+/* NATURAL */
+a:link {
+	color: DarkOrange;
+	text-decoration: underline;
+	}
+a:visited {
+	color: DarkMagenta;
+	text-decoration: underline;
+	}
+body {
+	background-color: white;
+	color: AntiqueWhite;
+}
+
+button {
+	color: DarkRed;
+}
+
+#toolbar{
+	background:#222;
+	color:white;
+	line-height: 2em;
+}
