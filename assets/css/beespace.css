@@ -16,3 +16,9 @@ body {
 button {
 	color: black;
 }
+
+#toolbar{
+  background:#222;
+  color:white;
+  line-height: 2em;
+}
