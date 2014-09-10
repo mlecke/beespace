@@ -1,0 +1,188 @@
+/*------------------------------------*\ $LICENSE
+ * Beespace v1.0.0
+ *
+ * Copyright 2014 Michael Lecke
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built by Michael Lecke.
+*/
+/*------------------------------------*\ $CONTENTS
+    CONTENTS
+\*------------------------------------*/
+/*
+ *([Cmd|Ctrl]+F) for $[SECTION-NAME]
+ *
+ * The $ prefixing the name of the section allows us to run a find
+ * and limit our search scope to section titles only.
+ * 
+ * LICENSE.............Shark repellent
+ * TOC.................Bzzz. You’re reading it!
+ * POOL-RULES..........Ignore at your own risk
+ * RESET / NORMALIZE...Set defaults
+ * FONT................Import brand font files
+ * BASE................Basics Elements
+ * LAYOUT..............Grids and what not
+ * OBJECTS.............Generic, underlying design patterns -- find them all!
+ * COMPONENTS..........Constructed from objects and their extensions
+ * STATES..............Application states. i.e. logged-in, error states, etc.
+ * THEMES..............Style trumps. 
+ * FIXES...............Highest specificity for precision styling. Page level overrides should be minimal.
+ * 
+ */
+/*------------------------------------*\ $POOL-RULES
+    POOL-RULES
+\*------------------------------------*/
+/*
+ * No Diving. That means: Read comments and comment often.
+ * Ensure HTML is responsive, semantic, accessible, bare-bones, i.e. text as real text, not as images.
+ * Use as little code as possible, specifying only what is needed.
+ * Classes are preferable to IDs. IDs are best used for linking and JS hooks, not styles.
+ * Image file names should be prefixed with their usage. (bg-container.jpg, not backround-container.jpg)
+ * Always use a *Table of Contents*
+ * Write stylesheets in specificity order to take full advantage of inheritance and the cascade.
+ * Indent to denote heirachy in element tree
+ * Always include the final semi-colon in a ruleset
+ * Drop Units from Zero Values
+ * Use Shorthand Hexadecimal Color Values
+ * Group & Align Vendor Prefixes (-webkit-linear-gradient)
+ * Try to not prefix a class selector with a type selector (p.mustard)
+ *
+ * Alphabetize property-value pairs within selectors
+ *
+ * a well-ordered stylesheet according to specificity:
+    1. Reset – ground zero.
+    2. Elements – unclassed h1, unclassed ul etc.
+    3. Objects and abstractions — generic, underlying design patterns.
+    4. Components – full components constructed from objects and their extensions.
+    5. Style trumps – error states etc.
+    
+ */
+
+/*------------------------------------*\ $RESET $NORMALIZE
+    RESET / NORMALIZE - Defaults
+\*------------------------------------*/
+/* normalize.css v3.0.1 | MIT License | git.io/normalize */
+
+@import 'assets/css/normalize.css'; /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+
+/*------------------------------------*\ $FONT
+    FONT - General Typography
+\*------------------------------------*/
+/* GOOGLE API
+ *font-family: 'Roboto', sans-serif;
+ *font-family: 'Open Sans', sans-serif;
+ *font-family: 'Lovers Quarrel', cursive;
+ *font-family: 'Handlee', cursive;
+ *font-family: 'Berkshire Swash', cursive;
+*/
+@import url(http://fonts.googleapis.com/css?family=Lovers+Quarrel|Roboto:500,400,700|Open+Sans:400italic,400,600|Handlee|Berkshire+Swash);
+
+/*
+
+/*
+
+
+
+
+
+body {
+  font-family: Handlee, cursive;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+
+h1, 
+h2, 
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1em;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 13px;
+}
+
+a:link { color: #3F72D8; text-decoration: none; }
+a:visited { color: #3F72D8; text-decoration: none; }
+a:focus, a:active { color: #3F72D8; text-decoration: none; }
+
+.gwt-hyperlink {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding-right: 15px;
+}
+
+ol {
+  line-height: 1.6em;
+}
+
+p {
+  margin-bottom: 1em;
+  line-height: 1.4em;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+blockquote:before, blockquote:after{
+  content: "";
+}
+
+q:before, q:after {
+  content: "";
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+
+fieldset {
+  display: block;
+}
+
+/* main layout elements
+####################################################################################
+*/
+
+.main-panel {
+  padding-right: 20px;
+  background: #fff;
+}
+
+/* homepage, unsupported
+####################################################################################
+*/    
+
+
+
+/* @import 'assets/css/bootstrap.css'; /* Bootstrap v3.0.2  -- release includes normalize.css */
+@import 'assets/css/bootstrap-responsive.css'; /* Bootstrap Responsive v2.1.0 */
+
+@import 'assets/css/beehive.css'; /* global styles for beespace.com */
