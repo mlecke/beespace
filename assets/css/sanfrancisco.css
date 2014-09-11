@@ -1,8 +1,9 @@
 /* Beespace work in progress */
 /* SAN FRANCISCO */
+/* San Francisco Giants: #000000 (black) | #FB5B1F (orange) | #731313 (dark brown) */
 body {
 	background-color: black;
-	color: GoldenRod;
+	color: #FB5B1F;
 }
 
 a:link {
@@ -10,12 +11,12 @@ a:link {
 	text-decoration: underline;
 }
 a:visited {
-	color: Olive;
+	color: #731313;
 	text-decoration: underline;
 }
 
 button {
-	color: GoldenRod;
+	color: #FB5B1F;
 }
 
 #toolbar{
