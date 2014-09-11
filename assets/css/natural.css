@@ -8,11 +8,11 @@ body {
 a:link {
 	color: DarkOrange;
 	text-decoration: underline;
-	}
+}
 a:visited {
 	color: DarkMagenta;
 	text-decoration: underline;
-	}
+}
 
 button {
 	color: DarkRed;

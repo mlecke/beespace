@@ -3,11 +3,11 @@
 body {
 	background-color: #072b76;
 	color: #0298d1;
-    font-family: Impact, Charcoal, sans-serif;
 }
 
 h1 {
 	color: inherit;
+	font-family: Impact, Charcoal, sans-serif;
     font-weight: 500;
     line-height: 1.1;
 }

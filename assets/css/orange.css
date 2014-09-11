@@ -2,17 +2,17 @@
 /* ORANGE */
 body {
 	background-color: #fa6200;
-	color: #ad4807;
+	color: DarkSlateGray;
 }
 
 a:link {
-	color: #07a7ad;
+	color: #ad4807;
 	text-decoration: underline;
-	}
+}
 a:visited {
 	color: #005d61;
 	text-decoration: underline;
-	}
+}
 
 button {
 	color: #fa6200;

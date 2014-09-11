@@ -2,7 +2,7 @@
 /* RED */
 body {
 	background-color: #5c0002;
-	color: #450003;
+	color: black;
 }
 
 a:link {
@@ -19,6 +19,6 @@ button {
 }
 
 #toolbar{
-	color:white;
+	color:#450003;
 	line-height: 2em;
 }

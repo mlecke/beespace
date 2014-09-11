@@ -2,17 +2,21 @@
 /* GREEN */
 body {
 	background-color: #006c00;
-	color: #004600;
+	color: LightSlateGray;
 }
 
 a:link {
 	color: #00ec00;
 	text-decoration: underline;
-	}
+}
 a:visited {
 	color: #00ac00;
 	text-decoration: underline;
-	}
+}
+a:hover, a:focus {
+  text-decoration: underline overline;
+}
+
 
 button {
 	color: black;
