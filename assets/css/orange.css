@@ -33,9 +33,6 @@ button {
 	display:inline-block;
 	cursor:pointer;
 	color:#14396a;
-	font-family:arial;
-	font-size:15px;
-	font-weight:bold;
 	padding:6px 76px;
 	text-decoration:none;
 	text-shadow:0px 2px 0px #7cacde;
@@ -50,11 +47,6 @@ button:hover {
 	background:linear-gradient(to bottom, #468ccf 5%, #63b8ee 100%);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#468ccf', endColorstr='#63b8ee',GradientType=0);
 	background-color:#468ccf;
-}
-button:active {
-	position:relative;
-	top:1px;
-	color: #fa6200;
 }
 
 #toolbar{

@@ -50,12 +50,6 @@ button:hover {
 	background-color:#f24437;
 }
 
-button:active {
-	position:relative;
-	top:1px;
-	color:#450003;
-}
-
 #toolbar{
 	color:#450003;
 	line-height: 2em;
