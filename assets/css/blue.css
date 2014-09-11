@@ -32,7 +32,6 @@ button {
 	display:inline-block;
 	cursor:pointer;
 	color:black;
-	font-family:Trebuchet MS;
 	font-weight:bold;
 	padding:0px 10px;
 	text-decoration:none;
@@ -40,15 +39,13 @@ button {
 }
 
 button:hover {
-	background-color:transparent;
+	background-color:blue;
 }
 button:active {
-	position:relative;
-	top:1px;
+	border:3px solid blue;
 }
 
 #toolbar{
 	color:white;
-	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 	line-height: 2em;
 }

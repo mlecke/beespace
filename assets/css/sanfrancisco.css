@@ -1,0 +1,24 @@
+/* Beespace work in progress */
+/* SAN FRANCISCO */
+body {
+	background-color: black;
+	color: GoldenRod;
+}
+
+a:link {
+	color: OldLace;
+	text-decoration: underline;
+}
+a:visited {
+	color: Olive;
+	text-decoration: underline;
+}
+
+button {
+	color: GoldenRod;
+}
+
+#toolbar{
+	color:white;
+	line-height: 2em;
+}
