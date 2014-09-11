@@ -1,5 +1,10 @@
 /* Beespace work in progress */
 /* RED */
+body {
+	background-color: #5c0002;
+	color: #450003;
+}
+
 a:link {
 	color: #ffed75;
 	text-decoration: underline;
@@ -8,17 +13,12 @@ a:visited {
 	color: #d40d12;
 	text-decoration: underline;
 	}
-body {
-	background-color: #450003;
-	color: #5c0002;
-}
 
 button {
 	color: white;
 }
 
 #toolbar{
-	background:#222;
 	color:white;
 	line-height: 2em;
 }

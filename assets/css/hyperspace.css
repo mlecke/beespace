@@ -1,5 +1,10 @@
 /* Beespace work in progress */
 /* NATURAL */
+body {
+	background-color: black;
+	color: GoldenRod;
+}
+
 a:link {
 	color: OldLace;
 	text-decoration: underline;
@@ -8,17 +13,12 @@ a:visited {
 	color: Olive;
 	text-decoration: underline;
 	}
-body {
-	background-color: black;
+
+button {
 	color: GoldenRod;
 }
 
-button {
-	color: DarkOrange;
-}
-
 #toolbar{
-	background:#222;
 	color:white;
 	line-height: 2em;
 }

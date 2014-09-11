@@ -1,17 +1,18 @@
 /* Beespace work in progress */
 /* ORIGINAL */
-a:link {
-	color: #f00;
-	text-decoration: underline;
-	}
-a:visited {
-	color: #c0c0c0;
-	text-decoration: underline;
-	}
 body {
 	background-color: #000;
 	color: #ff0;
 }
+
+a:link {
+  color: #f00;
+  text-decoration: underline;
+  }
+a:visited {
+  color: #c0c0c0;
+  text-decoration: underline;
+  }
 
 button {
 	color: black;

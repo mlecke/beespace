@@ -1,24 +1,24 @@
 /* Beespace work in progress */
 /* ORANGE */
+body {
+	background-color: #fa6200;
+	color: #ad4807;
+}
+
 a:link {
-	color: #fa6200;
+	color: #07a7ad;
 	text-decoration: underline;
 	}
 a:visited {
-	color: #ad4807;
+	color: #005d61;
 	text-decoration: underline;
 	}
-body {
-	background-color: #07a7ad;
-	color: #005d61;
-}
 
 button {
 	color: #fa6200;
 }
 
 #toolbar{
-	background:#222;
 	color:white;
 	line-height: 2em;
 }

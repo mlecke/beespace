@@ -1,24 +1,32 @@
 /* Beespace work in progress */
 /* BLUE */
+body {
+	background-color: #072b76;
+	color: #0298d1;
+    font-family: Impact, Charcoal, sans-serif;
+}
+
+h1 {
+	color: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
 a:link {
-	color: #7BD3D1;
+	color: #7bd3d1;
 	text-decoration: underline;
 	}
 a:visited {
-	color: #4077EB;
+	color: #4077eb;
 	text-decoration: underline;
 	}
-body {
-	background-color: #072B76;
-	color: #0298D1;
-}
 
 button {
-	color: #7BD3D1;
+	color: black;
 }
 
 #toolbar{
-	background:#222;
 	color:white;
+	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 	line-height: 2em;
 }
