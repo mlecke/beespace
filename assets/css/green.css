@@ -36,10 +36,9 @@ button {
 	display:inline-block;
 	cursor:pointer;
 	color:#306108;
-	font-family:Arial;
 	font-size:13px;
 	font-weight:bold;
-	padding:5px 20px;
+	padding:1px 20px;
 	text-decoration:none;
 	text-shadow:1px 1px 0px #aade7c;
 }
