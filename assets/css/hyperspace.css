@@ -18,6 +18,10 @@ button {
 	color: GoldenRod;
 }
 
+button:focus {
+	outline: none;
+}
+
 #toolbar{
 	color:white;
 	line-height: 2em;

@@ -52,9 +52,8 @@ button:hover {
 	background-color:#9ba892;
 }
 
-button:active {
-	position:relative;
-	top:1px;
+button:focus {
+	outline: none;
 }
 
 #toolbar{

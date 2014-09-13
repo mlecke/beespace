@@ -55,8 +55,8 @@ button:hover {
 	background-color:#468ccf;
 }
 
-button:active {
-	border:1px solid blue;
+button:focus {
+	outline: none;
 }
 
 #toolbar{

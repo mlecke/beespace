@@ -49,6 +49,10 @@ button:hover {
 	background-color:#468ccf;
 }
 
+button:focus {
+	outline: none;
+}
+
 #toolbar{
 	color:white;
 	line-height: 2em;
