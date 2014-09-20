@@ -5,6 +5,15 @@ body {
 	color: #ff0;
 }
 
+body style {
+  display: block;
+  background: #333;
+  color: white;
+  white-space: pre;
+  width: 35%;
+  margin-top: 1em;
+}
+
 a:link {
   color: #f00;
   text-decoration: underline;
