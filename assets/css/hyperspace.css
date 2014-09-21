@@ -16,11 +16,11 @@ body style {
 }
 
 a:link {
-	color: silver;
+	color: lime;
 	text-decoration: underline;
 }
 a:visited {
-	color: darkgrey;
+	color: silver;
 	text-decoration: underline;
 }
 
