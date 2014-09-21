@@ -1,6 +1,88 @@
 /* Beespace work in progress */
 /* BEE colors from a picture of a bee on adobe kuler */
 /* #D29A2B  #D29A2B #89540E #591A00 #F5F3F4 */
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+	body style {
+	  display: block;
+	  background: #333;
+	  color: white;
+	  white-space: pre;
+	  width: 15%;
+	  margin-top: 1em;
+	}
+
+	h1 {
+	  font-size: 150%;
+	}
+}
+
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+	body style {
+	  display: block;
+	  background: #333;
+	  color: white;
+	  white-space: pre;
+	  width: 20%;
+	  margin-top: 1em;
+	}
+
+	h1 {
+	  font-size: 125%;
+	}
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+	body style {
+	  display: block;
+	  background: #333;
+	  color: white;
+	  white-space: pre;
+	  width: 35%;
+	  margin-top: 1em;
+	}
+
+	h1 {
+	  font-size: 100%;
+	}	
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+	body style {
+	  display: block;
+	  background: #333;
+	  color: white;
+	  white-space: pre;
+	  width: 45%;
+	  margin-top: 1em;
+	}
+
+	h1 {
+	  font-size: 90%;
+	}
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+	body style {
+	  display: block;
+	  background: #333;
+	  color: white;
+	  white-space: pre;
+	  width: 45%;
+	  margin-top: 1em;
+	}
+
+	h1 {
+	  font-size: 85%;
+	}
+
+}
+
 body {
 	background-color: rgb(89,26,0);
 	margin: 0.5em;
