@@ -1,6 +1,10 @@
 /* Beespace work in progress */
 /* BEE colors from a picture of a bee on adobe kuler */
-/* #D29A2B  #D29A2B #89540E #591A00 #F5F3F4 */
+/* #D29A2B #A78949 #89540E #591A00 #F5F3F4 */
+
+/*@import url("http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css");*/ 
+@import url("http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css");
+@import url("http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css");
 
 /* Large desktops and laptops */
 @media (min-width: 1200px) {
@@ -83,14 +87,12 @@
 
 }
 
-/*@import url("http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css");*/ 
-@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css");
-@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css");
-
-
 body {
-	background-color: rgb(89,26,0);
+	background-color: #F5F3F4;
 	margin: 0.5em;
 }
 
-
+#toolbar{
+  color:white;
+  line-height: 2em;
+}
