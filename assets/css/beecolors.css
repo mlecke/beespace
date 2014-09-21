@@ -113,6 +113,10 @@ body style {
 	margin-top: 1em;
 }
 
+a:hover {
+	font-size: smaller;
+}
+
 #toolbar{
   color:white;
   line-height: 2em;
