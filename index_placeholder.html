@@ -6,13 +6,24 @@
   <meta name="description" content="template">
   <meta name="author" content="Michael Lecke">    
 
-  <link rel="shortcut icon" href="favicon.ico" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <link rel="stylesheet" href="beespace.css" />
+  <!-- favicon and icons -->
+  <link rel="shortcut icon" href="assets/ico/favicon.ico" />
+  <link rel="apple-touch-icon" href="assets/ico/apple-touch-icon.png" />
+
+  <!-- Normailze.css, hosted -->
+  <link rel="stylesheet" src="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css" />
+  <!-- alternate CDN: <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" /> -->
+  <!-- Latest compiled and minified bootstrap CSS, hosted -->
+  <link rel="stylesheet" title="bootstrap" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" />
+
+  <!-- Optional Bootstrap CSS theme, hosted -->
+  <link rel="stylesheet" title="bootstrap-theme" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css" />
+
+  <!-- main css -->
+  <link rel="stylesheet" href="beecolors.css" />
   
   <title>BeeSpace</title>
   
-  <script src='beespace.js'></script>
 </head>
  
 <body>
@@ -292,6 +303,26 @@
     
 </footer>
 
+    <!-- Javascript ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <!-- Google hosted API for JQUERY, JQUERY UI.
+    Remember to remove the HTTP header when copying to server
+    so Google can automatically make it work with https or http.
+    The http headers are only so it will work for local development from file.
+
+    AGAIN: In dev, use http: headers. When deploying, use NO http headers. -->
+                 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+    <!-- main js -->
+    <script src="assets/js/responsive_sample.js"></script>
+
 </body>
 
 </html>
+

@@ -1,8 +1,18 @@
 /* Beespace work in progress */
-/* NATURAL */
+/* HYPERSPACE */
 body {
 	background-color: black;
 	color: GoldenRod;
+	margin: 0.5em;
+}
+
+body style {
+	display: block;
+	background: #333;
+	color: white;
+	white-space: pre;
+	width: 35%;
+	margin-top: 1em;
 }
 
 a:link {
@@ -16,6 +26,7 @@ a:visited {
 
 button {
 	color: GoldenRod;
+	
 }
 
 button:focus {

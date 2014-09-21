@@ -3,6 +3,16 @@
 body {
 	background-color: #5c0002;
 	color: #d40d12;
+	margin: 0.5em;
+}
+
+body style {
+	display: block;
+	background: #333;
+	color: white;
+	white-space: pre;
+	width: 35%;
+	margin-top: 1em;
 }
 
 a:link {
