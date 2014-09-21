@@ -83,6 +83,11 @@
 
 }
 
+/*@import url("http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css");*/ 
+@import url("http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css");
+@import url("http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css");
+
+
 body {
 	background-color: rgb(89,26,0);
 	margin: 0.5em;
