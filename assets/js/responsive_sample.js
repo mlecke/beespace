@@ -8,15 +8,11 @@ $(document).ready(function(){
 	$(window).resize(function(){
         var width = $(window).width();
 
-        if (width <= 480){
+        if(width <= 480){
         	$('.in').collapse('toggle');
-        };
-
-        if (width > 480){
+        } else if (width > 480){
         	$('.collapse').collapse('toggle');
         };
-    })
-
-.resize(); 
+    }).resize(); 
 
 });
