@@ -100,7 +100,7 @@
 
 /* Landscape phones and smaller */
 @media (max-width: 480px) {
-	body style {
+	body style { 
 	  display: block;
 	  background: #333;
 	  color: white;

@@ -9,7 +9,7 @@ $(document).ready(function(){
         var width = $(window).width();
 
         if (width <= 480){
-        	$('button.collapse').removeClass('collapse').addClass('collapsed');
+        	$('.collapse in').collapse('toggle');
         }
     })
 
