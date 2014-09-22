@@ -10,7 +10,7 @@ $(document).ready(function(){
 
         if (width <= 480){
         	$('.in').collapse('toggle');
-        else 
+        else if (width > 480){
         	$('.collapse').collapse('toggle');
         }
     })
