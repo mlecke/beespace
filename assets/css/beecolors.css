@@ -116,6 +116,7 @@
 	button {
 		width: 100%;
 		font-size: 130%;
+		padding: 2px 3px 3px;
 	}
 
 	li {
