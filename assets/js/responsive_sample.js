@@ -10,9 +10,11 @@ $(document).ready(function(){
 
         if (width <= 480){
         	$('.in').collapse('toggle');
-        else if (width > 480){
+        };
+
+        if (width > 480){
         	$('.collapse').collapse('toggle');
-        }
+        };
     })
 
 .resize(); 
