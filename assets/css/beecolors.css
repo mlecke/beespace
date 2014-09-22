@@ -25,12 +25,16 @@
 	  background: #333;
 	  color: white;
 	  white-space: pre;
-	  width: 40%;
+	  width: 50%;
 	  margin-top: 1em;
 	}
 
 	h1 {
 	  font-size: 450%;
+	}
+
+	li {
+	  max-width:50%;
 	}
 }
 
@@ -48,6 +52,10 @@
 	h1 {
 	  font-size: 400%;
 	}
+
+	li {
+	  max-width:60%;
+	}
 }
 
 /* Portrait tablets and small desktops */
@@ -63,6 +71,10 @@
 
 	h1 {
 	  font-size: 350%;
+	}
+
+	li {
+	  max-width:75%;
 	}	
 }
 
@@ -79,6 +91,10 @@
 
 	h1 {
 	  font-size: 300%;
+	}
+
+	li {
+		max-width:80%;
 	}
 }
 
@@ -97,11 +113,24 @@
 	  font-size: 250%;
 	}
 
+	button {
+		width: 100%;
+		font-size: 130%;
+	}
+
+	li {
+		width:100%;
+	}
+
 }
 
 body {
 	background-color: #F5F3F4;
 	margin: 0.5em;
+}
+
+li {
+	max-width:85%;
 }
 
 a:hover {

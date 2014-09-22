@@ -5,25 +5,14 @@
 // └────────────────────────────────────────────────────────────────────┘ \\
 
 $(document).ready(function(){
-/* test for javascript
+	$(window).resize(function(){
+        var width = $(window).width();
 
+        if (width <= 480){
+        	$('button.collapse').removeClass('collapse').addClass('collapsed');
+        }
+    })
 
+.resize(); 
 
-/*
-/* 
-
-
-/* get dimensions, set largest square, get center x,y coordinates
-/* if combCellCenter is true, redraw with new center 
-/* else make combCellCenter object, draw center comb cell, fade in
-/*
-/* set combCellCenter prototype properties
-/* draw surrounding cells, fade in
-/* set as flexible comb with defined behaviors
-/* get buzzwords
-/* pull Twitter data using API
-/* parse into terms, rank
-/* draw clouds with z-index depth
-*/
- 
-  });
+});
