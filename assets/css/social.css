@@ -11,3 +11,41 @@
 	-webkit-hyphens: manual;
 	-webkit-shape-inside: polygon(0px 0px, 0 300px, 300px 300px);
 }
+
+.hexagon {
+    width: 100px;
+    height: 55px;
+    position: relative;
+    margin: 100px auto;
+}
+.hexagon, .hexagon:before, .hexagon:after {
+   background: rgb(255, 204, 0);
+   -moz-box-shadow: 0 0 10px rgba(0,0,0,0.8);
+   -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.8);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.28);   
+}
+.hexagon:before, .hexagon:after {
+    content: "";
+    position: absolute;
+    left: 22px;
+    width: 57px;
+    height: 57px;
+    -moz-transform: rotate(145deg) skew(22.5deg);
+    -webkit-transform: rotate(145deg) skew(22.5deg);
+    transform: rotate(145deg) skew(22.5deg);
+}
+.hexagon:before {
+    top: -29px;
+}
+.hexagon:after {
+    top: 27px;
+}
+.hexagon span {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100px;
+   height: 55px;
+   background: rgb(255, 204, 0);
+   z-index: 1;
+}
