@@ -1,0 +1,13 @@
+.svg-shape {
+	-webkit-shape-inside: polygon(75.778px 272.829px, 1.555px 144.271px, 75.778px 15.713px, 224.222px 15.713px, 298.444px 144.271px, 224.222px 272.829px);
+}
+
+.basic-shape {
+	font-size: 12px;
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+	text-align: justify;
+	-webkit-hyphens: manual;
+	-webkit-shape-inside: polygon(0px 0px, 0 300px, 300px 300px);
+}

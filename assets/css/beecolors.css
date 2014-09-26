@@ -130,6 +130,13 @@ body {
 	margin: 0.5em;
 }
 
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+}
+
 li {
 	max-width:85%;
 }
