@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="">
+  <head>
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <meta name="google" value="notranslate">
+
+
+    <title>CodePen - FCC: Quote Machine (v2)</title>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:300,300italic,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <link rel='stylesheet prefetch' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+
+        <style>
+      body {
+  font-family: 'Merriweather', sans-serif;
+  color: darkblue;
+}
+
+blockquote {
+  vertical-align: center;
+  margin-right: .25em;
+}
+
+blockquote footer {
+   color: inherit;
+}
+
+blockquote footer:before {
+  content: url(http://www.xmaptools.com/wp-content/uploads/2011/10/QuotationMark.png);
+}
+
+.hidden {
+  display: none;
+}
+
+.text-info {
+  color:inherit;
+  display:inline-block;
+}
+
+#outerQuoteContainer {
+  width: 100%;
+  min-width: 240px;
+  background: -webkit-linear-gradient(right, darkblue, goldenrod);
+  /*Safari 5.1-6*/
+  
+  background: -o-linear-gradient(right, darkblue, goldenrod);
+  /*Opera 11.1-12*/
+  
+  background: -moz-linear-gradient(right, darkblue, goldenrod);
+  /*Fx 3.6-15*/
+  
+  background: linear-gradient(to right, darkblue, goldenrod);
+  /*Standard*/
+  
+  border: 4px solid goldenrod;
+  padding: .1em .1em .1em 5em;
+}
+
+img {
+  float: left;
+  margin-left: -55px;
+  margin-top: 3%;
+}
+
+#quoteContainer {
+  width: 100%;
+  background: -webkit-linear-gradient(left, white, goldenrod);
+  /*Safari 5.1-6*/
+  
+  background: -o-linear-gradient(left, white, goldenrod);
+  /*Opera 11.1-12*/
+  
+  background: -moz-linear-gradient(left, white, goldenrod);
+  /*Fx 3.6-15*/
+  
+  background: linear-gradient(to left, white, goldenrod);
+  /*Standard*/
+  
+  border: 1px solid goldenrod;
+  padding-top: 1em;
+  padding-left: 1em;
+  margin: auto;
+  text-align: left;
+}
+
+#buttonContainer {
+  width: 50%;
+  margin-left: 1.75em;
+  margin-bottom: 1.75em;
+}
+
+#quoteButton {
+  width: 120px;
+  margin-top: 10px;
+  border: 2px solid goldenrod;
+  background-color: darkblue;
+  color: white;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 5px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+
+#quoteButton:hover {
+  cursor: pointer;
+  background: goldenrod;
+  color: darkblue;
+  border: 2px solid darkblue;
+}
+
+#quoteButton:active {
+  cursor: pointer;
+}
+    </style>
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+  <h1>Quote Machine</h1>
+  <div id="outerQuoteContainer"><img src="http://www.xmaptools.com/wp-content/uploads/2011/10/QuotationMark.png" onerror="this.src=&quot;http://icons.iconarchive.com/icons/chrisbanks2/cold-fusion-hd/128/quotes-icon.png&quot;" height="40">
+    <div id="quoteContainer" class="lead">
+      <blockquote>
+        <span id="quote" class="show">Quotation, n: The act of repeating erroneously the words of another.</span>
+        <footer><span id="speaker" class="show">Ambrose Bierce</span></footer>
+      </blockquote>
+    </div>
+    <!--end quoteContainer-->
+  </div>
+  <!--end outerQuoteContainer-->
+
+  <div>
+    <!-- citation and link -->
+    <span class="text-info small">
+      <cite>
+        <span id="cite" class="show"><!-- append data -->
+          &nbsp;&nbsp;Source:&nbsp;<a href="http://www.thedevilsdictionary.com/" target="blank">The Unabridged Devil's Dictionary</a></span>
+    </cite>
+    <span class="small text-left">
+        <cite>
+          <span id="linky" class="show"></span>
+    <!-- append data -->
+    </cite>
+    </span>
+  </div>
+  <!-- citation and link -->
+
+  <div id="buttonContainer">
+    <a href="#" id="quoteButton">Quote Me</a>
+  </div>
+  <!--end buttonContainer-->
+
+</div>
+<!-- end container-fluid -->
+    
+    <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+        <script>
+      $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=40&callback=", function(a) {
+  //iterate JSON, write the HTML and use CSS to hide/show with display:none;
+  //use a button to change CSS to hide/show one of the 40 spans
+  //vor v3 close over the array value and pass it to a function outside the callback. may need to use a "promise".
+  jQuery.each(a, function(i, val) {
+    var speaker = (a[i].title);
+    var quote = (a[i].content);
+    var linky = (a[i].link);
+    if (typeof a[i].custom_meta !== 'undefined' && typeof a[i].custom_meta.Source !== 'undefined') {
+      var cite = (a[i].custom_meta.Source);
+    } else {
+      var cite = "";
+    };
+    //call writeToDom within the callback to access the JSONP data
+    writeToDom(speaker, quote, linky, cite, i);
+    // writeToDom must live within the callback as well.
+    function writeToDom(speaker, quote, linky, cite, i) {
+      //write new spans for data
+      if (i == 'undefined') {
+        return; //conditional for button function, is this ok?
+      };
+      speakertag = "<span id=\"speaker" + i + "\" class=\"hidden\">" + speaker + "</span>";
+      quotetag = "<span id=\"quote" + i + "\" class=\"hidden\">" + quote + "</span>";
+      linkytag = "<span id=\"linky" + i + "\" class=\"hidden\">&nbsp;&nbsp;<a href=\"" + linky + "\">Link to Quote</a></span>";
+      if (cite == "") {
+        citetag = "<span id=\"cite" + i + "\" class=\"hidden\">" + cite + "</span>"
+      } else {
+        citetag = "<span id=\"cite" + i + "\" class=\"hidden\">&nbsp;&nbsp;Source:&nbsp;" + cite + "</span>"
+      };
+      $("#speaker").parent().append(speakertag);
+      $("#quote").parent().prepend(quotetag);
+      $("#linky").parent().append(linkytag);
+      $("#cite").parent().prepend(citetag);
+    }
+  });
+
+});
+//this button function sucks. Re-style!
+// 
+$('#quoteButton').click(function(evt) {
+  evt.preventDefault();
+  var sourceLength = 40;
+  var randomNumber = Math.floor(Math.random() * sourceLength);
+  for (i = 0; i <= sourceLength; i += 1) {
+    var timeAnimation = 600;
+    var quoteContainer = $('#quoteContainer');
+    var quoteID = "quote" + randomNumber;
+    var speakerID = "speaker" + randomNumber;
+    var linkyID = "linky" + randomNumber;
+    var citeID = "cite" + randomNumber;
+    //hide the current data
+    quoteContainer.fadeOut(timeAnimation, function() {
+      // check the IDs are passing
+      //alert(quoteID + speakerID + linkyID + citeID);
+      $(".show").addClass("hidden").removeClass("show");
+      //while fadedout, show/hide the quote data with CSS with all spans
+      $("#" + quoteID).removeClass("hidden").addClass("show");
+      $("#" + speakerID).removeClass("hidden").addClass("show");
+      $("#" + linkyID).removeClass("hidden").addClass("show");
+      $("#" + citeID).removeClass("hidden").addClass("show");
+      quoteContainer.fadeIn(timeAnimation);
+    });
+
+    break;
+  }; //end for loop
+}); //end quoteButton function
+      //@ sourceURL=pen.js
+    </script>        
+    
+  </body>
+</html>
+ 
