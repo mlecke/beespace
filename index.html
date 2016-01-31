@@ -1,120 +1,462 @@
-<!doctype html>
-<html lang="en">
+
+<!DOCTYPE html>
+<html >
   <head>
     <meta charset="UTF-8">
     <meta name="google" value="notranslate">
 
 
-    <title>CodePen - FCC: Quote Machine (v2)</title>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:300,300italic,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    
-    <link rel='stylesheet prefetch' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <title>Home &ndash; BeeSpace &ndash; Web Design and more by Michael Lecke</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Portfolio">
+    <meta name="author" content="Michael Lecke">
+    <link rel="shortcut icon" href="http://www.beespace.com/favicon.ico">
+    <link rel="apple-touch-icon" href="http://www.beespace.com/assets/ico/apple-touch-icon.png">
+
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="#e1ad21">
+
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css'>
+    <link rel='stylesheet prefetch' href='https://cdn.jsdelivr.net/bootstrap-social/4.10.1/bootstrap-social.css'>
 
         <style>
-      body {
-  font-family: 'Merriweather', sans-serif;
-  color: darkblue;
+      @import url(https://fonts.googleapis.com/css?family=Offside);
+* {
+  -webkit-outline: 0;
+  -moz-outline: 0;
+  -o-outline: 0;
+  outline: 0;
+  text-decoration: none;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  box-sizing: border-box;
 }
 
-blockquote {
-  vertical-align: center;
-  margin-right: .25em;
+input:focus, input:hover, textarea:focus, textarea:hover {
+  -webkit-outline: 0;
+  -moz-outline: 0;
+  -o-outline: 0;
+  outline: 0;
 }
 
-blockquote footer {
-   color: inherit;
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl,
+dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td {
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+  font-family: "Offside", serif;
+  font-size: 16px;
+  font-style: inherit;
+  font-weight: 400;
+  line-height: 1.4;
+  border: 0;
 }
 
-blockquote footer:before {
-  content: url(http://www.xmaptools.com/wp-content/uploads/2011/10/QuotationMark.png);
+html, body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.hidden {
+body {
+  background-color: #231aae;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+.ghost {
+  opacity: 0;
+}
+
+.super-ghost {
   display: none;
 }
 
-.text-info {
-  color:inherit;
-  display:inline-block;
+.main__wrapper {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  background-color: black;
+  border-radius: 3px;
 }
 
-#outerQuoteContainer {
-  width: 100%;
-  min-width: 240px;
-  background: -webkit-linear-gradient(right, darkblue, goldenrod);
-  /*Safari 5.1-6*/
-  
-  background: -o-linear-gradient(right, darkblue, goldenrod);
-  /*Opera 11.1-12*/
-  
-  background: -moz-linear-gradient(right, darkblue, goldenrod);
-  /*Fx 3.6-15*/
-  
-  background: linear-gradient(to right, darkblue, goldenrod);
-  /*Standard*/
-  
-  border: 4px solid goldenrod;
-  padding: .1em .1em .1em 5em;
+.main__wrapper--center {
+  width: 90vw;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-img {
-  float: left;
-  margin-left: -55px;
-  margin-top: 3%;
-}
-
-#quoteContainer {
-  width: 100%;
-  background: -webkit-linear-gradient(left, white, goldenrod);
-  /*Safari 5.1-6*/
-  
-  background: -o-linear-gradient(left, white, goldenrod);
-  /*Opera 11.1-12*/
-  
-  background: -moz-linear-gradient(left, white, goldenrod);
-  /*Fx 3.6-15*/
-  
-  background: linear-gradient(to left, white, goldenrod);
-  /*Standard*/
-  
-  border: 1px solid goldenrod;
-  padding-top: 1em;
-  padding-left: 1em;
-  margin: auto;
-  text-align: left;
-}
-
-#buttonContainer {
-  width: 50%;
-  margin-left: 1.75em;
-  margin-bottom: 1.75em;
-}
-
-#quoteButton {
-  width: 120px;
-  margin-top: 10px;
-  border: 2px solid goldenrod;
-  background-color: darkblue;
-  color: white;
-  font-family: inherit;
-  font-weight: bold;
-  padding: 5px;
-  text-decoration: none;
+.main__header {
+  display: block;
+  position: relative;
+  margin-bottom: 24px;
   text-align: center;
+}
+.main__header .main__title {
+  padding: 8px 16px;
+  color: #e1ad21;
+  font-family: "Offside";
+  font-size: 42px;
+  font-weight: 300;
+}
+
+.main__navigation {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  border-radius: 3px;
+}
+.main__navigation ul {
+  margin: 0;
+  padding: 0;
+}
+.main__navigation ul li {
   display: inline-block;
 }
-
-#quoteButton:hover {
-  cursor: pointer;
-  background: goldenrod;
-  color: darkblue;
-  border: 2px solid darkblue;
+.main__navigation ul li a {
+  display: block;
+  color: white;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 10px 10px;
+}
+.main__navigation ul li a:hover {
+  background-color: rgb(32,84,225);
+    text-decoration: none;
 }
 
-#quoteButton:active {
-  cursor: pointer;
+.main__content {
+  display: block;
+  position: relative;
+  margin-top: 40px;
+  padding: 24px;
+  text-align: center;
+  border-top: 2px solid #2054e1;
+  background: -webkit-linear-gradient(top, #2054e1, #e1ad21);
+  background: linear-gradient(top, #2054e1, #e1ad21);
+}
+.main__content .main__article {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 66px;
+}
+.main__content .main__article .main__article-header {
+  margin: 0;
+  margin-bottom: 0px;
+  padding: 0;
+  font-family: "Offside";
+  font-size: 24px;
+  font-weight: 300;
+}
+.main__content .main__article .main__article-content {
+  font-size: 16px;
+  font-weight: 400;
+  height: 100%;
+}
+
+a.anchor {
+  padding-top: 40px;
+  margin-top: -40px;
+  display: inline-block;
+  /* required for webkit browsers */
+}
+
+
+/* below is a fix for bootstrap-social.css You Tube issue
+/* cdn is loaded as link, update with fix when newer version comes out.
+*/
+
+.btn-youtube {
+  color: #fff;
+  background-color: #DC2725;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-youtube:hover,
+.btn-youtube:focus,
+.btn-youtube:active,
+.btn-youtube.active,
+.open>.dropdown-toggle.btn-youtube {
+  color: #fff;
+  background-color: #B21E1C;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-youtube:active,
+.btn-youtube.active,
+.open>.dropdown-toggle.btn-youtube {
+  background-image: none
+}
+
+.btn-youtube.disabled,
+.btn-youtube[disabled],
+fieldset[disabled] .btn-youtube,
+.btn-youtube.disabled:hover,
+.btn-youtube[disabled]:hover,
+fieldset[disabled] .btn-youtube:hover,
+.btn-youtube.disabled:focus,
+.btn-youtube[disabled]:focus,
+fieldset[disabled] .btn-youtube:focus,
+.btn-youtube.disabled:active,
+.btn-youtube[disabled]:active,
+fieldset[disabled] .btn-youtube:active,
+.btn-youtube.disabled.active,
+.btn-youtube[disabled].active,
+fieldset[disabled] .btn-youtube.active {
+  background-color: #DC2725;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-youtube .badge {
+  color: #DC2725;
+  background-color: #fff
+}
+
+.btn-fa-fire {
+  color: #FFF;
+  background-color: #492C14;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-fa-fire:hover,
+.btn-fa-fire:focus,
+.btn-fa-fire:active,
+.btn-fa-fire.active {
+  color: #492C14;
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-fa-fire:active,
+.btn-fa-fire.active,
+.open>.dropdown-toggle.btn-fa-fire {
+  background-image: none
+}
+
+.btn-fa-fire.active {
+  background-color: #492C14;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-yelp {
+  color: #fff;
+  background-color: #C41200;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-yelp:hover,
+.btn-yelp:focus,
+.btn-yelp:active,
+.btn-yelp.active,
+.open>.dropdown-toggle.btn-yelp {
+  color: #C41200;
+  background-color: #fff;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-yelp:active,
+.btn-yelp.active,
+.open>.dropdown-toggle.btn-yelp {
+  background-image: none
+}
+
+.btn-yelp.active {
+  background-color: #C41200;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-codepen {
+  color: #FFF;
+  background-color: #000;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-codepen:hover,
+.btn-codepen:focus,
+.btn-codepen:active,
+.btn-codepen.active,
+.open>.dropdown-toggle.btn-codepen {
+  color: #000;
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-codepen:active,
+.btn-codepen.active,
+.open>.dropdown-toggle.btn-codepen {
+  background-image: none
+}
+
+.btn-codepen.active {
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-medium {
+  color: #FFF;
+  background-color: #000;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-medium:hover,
+.btn-medium:focus,
+.btn-medium:active,
+.btn-medium.active,
+.open>.dropdown-toggle.btn-medium {
+  color: #000;
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-medium:active,
+.btn-medium.active,
+.open>.dropdown-toggle.btn-medium {
+  background-image: none
+}
+
+.btn-medium.active {
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-vine {
+  color: #FFF;
+  background-color: #00B386;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-vine:hover,
+.btn-vine:focus,
+.btn-vine:active,
+.btn-vine.active,
+.open>.dropdown-toggle.btn-vine {
+  color: #00B386;
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-vine:active,
+.btn-vine.active,
+.open>.dropdown-toggle.btn-vine {
+  background-image: none
+}
+
+.btn-vine.active {
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-jsfiddle {
+  color: #FFF;
+  background-color: #4679A4;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-jsfiddle:hover,
+.btn-jsfiddle:focus,
+.btn-jsfiddle:active,
+.btn-jsfiddle.active,
+.open>.dropdown-toggle.btn-jsfiddle {
+  color: #4679A4;
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-jsfiddle:active,
+.btn-jsfiddle.active,
+.open>.dropdown-toggle.btn-jsfiddle {
+  background-image: none
+}
+
+.btn-jsfiddle.active {
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-stack-exchange {
+  color: #FFF;
+  background-color: #000;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-stack-exchange:hover,
+.btn-stack-exchange:focus,
+.btn-stack-exchange:active,
+.btn-stack-exchange.active,
+.open>.dropdown-toggle.btn-stack-exchange {
+  color: #000;
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-stack-exchange:active,
+.btn-stack-exchange.active,
+.open>.dropdown-toggle.btn-stack-exchange {
+  background-image: none
+}
+
+.btn-stack-exchange.active {
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-delicious {
+  color: #FFF;
+  background-color: #000;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-delicious:hover,
+.btn-delicious:focus,
+.btn-delicious:active,
+.btn-delicious.active,
+.open>.dropdown-toggle.btn-delicious {
+  color: #000;
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-delicious:active,
+.btn-delicious.active,
+.open>.dropdown-toggle.btn-delicious {
+  background-image: none
+}
+
+.btn-delicious.active {
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+footer {
+    background: black;
+    height: 40px;
 }
     </style>
 
@@ -125,115 +467,77 @@ img {
 
   <body>
 
-    <div class="container-fluid">
-  <h1>Quote Machine</h1>
-  <div id="outerQuoteContainer"><img src="http://www.xmaptools.com/wp-content/uploads/2011/10/QuotationMark.png" onerror="this.src=&quot;http://icons.iconarchive.com/icons/chrisbanks2/cold-fusion-hd/128/quotes-icon.png&quot;" height="40">
-    <div id="quoteContainer" class="lead">
-      <blockquote>
-        <span id="quote" class="show">Quotation, n: The act of repeating erroneously the words of another.</span>
-        <footer><span id="speaker" class="show">Ambrose Bierce</span></footer>
-      </blockquote>
+    <div class="main__wrapper main__wrapper--center container-fluid">
+    <div class="row">
+        <header class="main__header">
+            <h1 class="main__title">BeeSpace</h1>
+        </header>
     </div>
-    <!--end quoteContainer-->
-  </div>
-  <!--end outerQuoteContainer-->
-
-  <div>
-    <!-- citation and link -->
-    <span class="text-info small">
-      <cite>
-        <span id="cite" class="show"><!-- append data -->
-          &nbsp;&nbsp;Source:&nbsp;<a href="http://www.thedevilsdictionary.com/" target="blank">The Unabridged Devil's Dictionary</a></span>
-    </cite>
-    <span class="small text-left">
-        <cite>
-          <span id="linky" class="show"></span>
-    <!-- append data -->
-    </cite>
-    </span>
-  </div>
-  <!-- citation and link -->
-
-  <div id="buttonContainer">
-    <a href="#" id="quoteButton">Quote Me</a>
-  </div>
-  <!--end buttonContainer-->
-
+    <!--header row -->
+    <div class="row">
+        <nav class="main__navigation">
+            <ul>
+                <li><a href="#">Web Design</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- nav row -->
+    <div class="row">
+        <main class="main__content">
+            <article class="main__article">
+                <h2 class="main__article-header">Buzz Me:</h2>
+                <br />
+                <div class="row">
+                    <a class="anchor" id="contact"></a>
+                    <div class='col-md-12'>
+                        <div class="btn-group">
+                            <a href="http://www.freecodecamp.com/mlecke" target="_blank" class="btn btn-social-icon btn-fa-fire" role="button" title="Free Code Camp"><i class="fa fa-fire"></i></a>
+                            <a href="http://beespace.yelp.com" target="_blank" class="btn btn-social-icon btn-yelp" role="button" title="Yelp"><i class="fa fa-yelp"></i></a>
+                            <a href="http://codepen.io/beespace/" target="_blank" class="btn btn-social-icon btn-codepen" role="button" title="Codepen"><i class="fa fa-codepen"></i></a>
+                            <a href="https://github.com/mlecke" target="_blank" class="btn btn-social-icon btn-github" role="button" title="Github"><i class="fa fa-github"></i></a>
+                            <a href="https://www.linkedin.com/pub/michael-lecke/3/169/b74" target="_blank" class="btn btn-social-icon btn-linkedin" role="button" title="Linked In"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://twitter.com/Bee5pace" target="_blank" class="btn btn-social-icon btn-twitter" role="button" title="Twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/michael.lecke.3" target="_blank" class="btn btn-social-icon btn-facebook" role="button" title="Facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="https://medium.com/@bee5pace" target="_blank" class="btn btn-social-icon btn-medium" role="button" title="Medium"><i class="fa fa-medium"></i></a>
+                            <a href="https://vine.co/beespace" target="_blank" class="btn btn-social-icon btn-vine" role="button" title="Vine"><i class="fa fa-vine"></i></a>
+                            <a href="https://plus.google.com/+MichaelLecke/posts" class="btn btn-social-icon btn-google" role="button" title="Google"><i class="fa fa-google-plus"></i></a>
+                            <a href="http://www.youtube.com/channel/UC_5OM4-rCrplFOMyjdhmgtQ/channels" class="btn btn-social-icon btn-youtube" role="button" title="You Tube"><i class="fa fa-youtube"></i></a>
+                            <a href="https://delicious.com/mlecke" class="btn btn-social-icon btn-delicious" role="button" title="Delicious"><i class="fa fa-delicious"></i></a>
+                            <a href="https://soundcloud.com/beespace-1" class="btn btn-social-icon btn-soundcloud" role="button" title="Soundcloud"><i class="fa fa-soundcloud"></i></a>
+                            <a href="http://www.pinterest.com/bee5pace/" class="btn btn-social-icon btn-pinterest" role="button" title="Pinterest"><i class="fa fa-pinterest"></i></a>
+                            <a href="http://www.dropbox.com/" class="btn btn-social-icon btn-dropbox" role="button" title="Dropbox"><i class="fa fa-dropbox"></i></a>
+                            <a href="http://jsfiddle.net/user/mlecke/" class="btn btn-social-icon btn-jsfiddle" role="button" title="JSFiddle"><i class="fa fa-jsfiddle"></i></a>
+                            <a href="https://stackexchange.com/users/4713162/beespace" class="btn btn-social-icon btn-stack-exchange"><i class="fa fa-stack-exchange" role="button" title="Stack Exchange"></i></a>
+                            <a href="https://instagram.com/mlecke/" class="btn btn-social-icon btn-instagram" role="button" title="Instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.reddit.com/user/Bee5pace/m/webdev/" class="btn btn-social-icon btn-reddit" role="button" title="Reddit"><i class="fa fa-reddit"></i></a>
+                        </div>
+                        <!-- button group social -->
+                    </div>
+                </div>
+            </article>
+        </main>
+    </div>
+    <div class="row">
+        <footer>
+            <span class="copyright align-center">copyright <span class="fa fa-copyright fa-pulse"></span> beespace.com 2016</span>
+        </footer>
+    </div>
 </div>
-<!-- end container-fluid -->
     
-    <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
-<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
 
         <script>
-      $.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=40&callback=", function(a) {
-  //iterate JSON, write the HTML and use CSS to hide/show with display:none;
-  //use a button to change CSS to hide/show one of the 40 spans
-  //vor v3 close over the array value and pass it to a function outside the callback. may need to use a "promise".
-  jQuery.each(a, function(i, val) {
-    var speaker = (a[i].title);
-    var quote = (a[i].content);
-    var linky = (a[i].link);
-    if (typeof a[i].custom_meta !== 'undefined' && typeof a[i].custom_meta.Source !== 'undefined') {
-      var cite = (a[i].custom_meta.Source);
-    } else {
-      var cite = "";
-    };
-    //call writeToDom within the callback to access the JSONP data
-    writeToDom(speaker, quote, linky, cite, i);
-    // writeToDom must live within the callback as well.
-    function writeToDom(speaker, quote, linky, cite, i) {
-      //write new spans for data
-      if (i == 'undefined') {
-        return; //conditional for button function, is this ok?
-      };
-      speakertag = "<span id=\"speaker" + i + "\" class=\"hidden\">" + speaker + "</span>";
-      quotetag = "<span id=\"quote" + i + "\" class=\"hidden\">" + quote + "</span>";
-      linkytag = "<span id=\"linky" + i + "\" class=\"hidden\">&nbsp;&nbsp;<a href=\"" + linky + "\">Link to Quote</a></span>";
-      if (cite == "") {
-        citetag = "<span id=\"cite" + i + "\" class=\"hidden\">" + cite + "</span>"
-      } else {
-        citetag = "<span id=\"cite" + i + "\" class=\"hidden\">&nbsp;&nbsp;Source:&nbsp;" + cite + "</span>"
-      };
-      $("#speaker").parent().append(speakertag);
-      $("#quote").parent().prepend(quotetag);
-      $("#linky").parent().append(linkytag);
-      $("#cite").parent().prepend(citetag);
-    }
-  });
-
+      $(document).ready(function() {
+   
 });
-//this button function sucks. Re-style!
-// 
-$('#quoteButton').click(function(evt) {
-  evt.preventDefault();
-  var sourceLength = 40;
-  var randomNumber = Math.floor(Math.random() * sourceLength);
-  for (i = 0; i <= sourceLength; i += 1) {
-    var timeAnimation = 600;
-    var quoteContainer = $('#quoteContainer');
-    var quoteID = "quote" + randomNumber;
-    var speakerID = "speaker" + randomNumber;
-    var linkyID = "linky" + randomNumber;
-    var citeID = "cite" + randomNumber;
-    //hide the current data
-    quoteContainer.fadeOut(timeAnimation, function() {
-      // check the IDs are passing
-      //alert(quoteID + speakerID + linkyID + citeID);
-      $(".show").addClass("hidden").removeClass("show");
-      //while fadedout, show/hide the quote data with CSS with all spans
-      $("#" + quoteID).removeClass("hidden").addClass("show");
-      $("#" + speakerID).removeClass("hidden").addClass("show");
-      $("#" + linkyID).removeClass("hidden").addClass("show");
-      $("#" + citeID).removeClass("hidden").addClass("show");
-      quoteContainer.fadeIn(timeAnimation);
-    });
-
-    break;
-  }; //end for loop
-}); //end quoteButton function
       //@ sourceURL=pen.js
-    </script>        
+    </script>
+
+    
+    
     
   </body>
 </html>
