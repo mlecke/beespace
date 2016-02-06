@@ -1,68 +1,441 @@
-/* Beespace work in progress */
-/* ORIGINAL */
+/*! beespace.css  |  beespace.com
+
+There's no place like Comb.
+
+(C) Michael Lecke 2016, Code is under MIT license, Content is Creative Commons. */
+
+@import url(https://fonts.googleapis.com/css?family=Offside);
+
+* {
+  -webkit-outline: 0;
+  -moz-outline: 0;
+  -o-outline: 0;
+  outline: 0;
+  text-decoration: none;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  box-sizing: border-box;
+}
+
+input:focus, input:hover, textarea:focus, textarea:hover {
+  -webkit-outline: 0;
+  -moz-outline: 0;
+  -o-outline: 0;
+  outline: 0;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
+font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl,
+dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td {
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+  font-family: "Offside", serif;
+  font-size: 16px;
+  font-style: inherit;
+  font-weight: 400;
+  line-height: 1.4;
+  border: 0;
+}
+
+html, body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-	background-color: #000;
-	color: #ff0;
-  margin: 0.5em;
+  background-color: #231aae;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-body style {
+a {
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+.ghost {
+  opacity: 0;
+}
+
+.super-ghost {
+  display: none;
+}
+
+.main__wrapper {
   display: block;
-  background: #333;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  background-color: black;
+  border-radius: 3px;
+}
+
+.main__wrapper--center {
+  width: 90vw;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.main__header {
+  display: block;
+  position: relative;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.main__header .main__title {
+  padding: 8px 16px;
+  color: #e1ad21;
+  font-family: "Offside";
+  font-size: 42px;
+  font-weight: 300;
+}
+
+.main__navigation {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+  border-radius: 3px;
+}
+.main__navigation ul {
+  margin: 0;
+  padding: 0;
+}
+.main__navigation ul li {
+  display: inline-block;
+}
+.main__navigation ul li a {
+  display: block;
   color: white;
-  white-space: pre;
-  margin-top: 1em;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 10px 10px;
+}
+.main__navigation ul li a:hover {
+  background-color: rgb(32,84,225);
+    text-decoration: none;
 }
 
-a:link {
-  color: #f00;
-  text-decoration: underline;
+.main__content {
+  display: block;
+  position: relative;
+  margin-top: 40px;
+  padding: 24px;
+  text-align: center;
+  border-top: 2px solid #2054e1;
+  background: -webkit-linear-gradient(top, #2054e1, #e1ad21);
+  background: linear-gradient(top, #2054e1, #e1ad21);
+}
+.main__content .main__article {
+  display: block;
+  position: relative;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 50px;
+}
+.main__content .main__article .main__article-header {
+  margin: 0;
+  margin-bottom: 0px;
+  padding: 0;
+  font-family: "Offside";
+  font-size: 24px;
+  font-weight: 300;
+}
+.main__content .main__article .main__article-content {
+  font-size: 16px;
+  font-weight: 400;
+  height: 100%;
 }
 
-a:visited {
-  color: #c0c0c0;
-  text-decoration: underline;
+a.anchor {
+  padding-top: 40px;
+  margin-top: -40px;
+  display: inline-block;
+  /* required for webkit browsers */
 }
 
-button {
-     -moz-box-shadow: 0px 10px 14px -13px #fff6af;
-  -webkit-box-shadow: 0px 10px 14px -13px #fff6af;
-          box-shadow: 0px 10px 14px -13px #fff6af;
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffff00), color-stop(1, #ffab23));
-  background:-moz-linear-gradient(top, #ffff00 5%, #ffab23 100%);
-  background:-webkit-linear-gradient(top, #ffff00 5%, #ffab23 100%);
-  background:-o-linear-gradient(top, #ffff00 5%, #ffab23 100%);
-  background:-ms-linear-gradient(top, #ffff00 5%, #ffab23 100%);
-  background:linear-gradient(to bottom, #ffff00 5%, #ffab23 100%);
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff00', endColorstr='#ffab23',GradientType=0);
-  background-color:#ffff00;
-     -moz-border-radius:8px;
-  -webkit-border-radius:8px;
-  border-radius:8px;
-  border:1px solid #ffaa22;
-  display:inline-block;
-  cursor:pointer;
-  color:#333333;
-  padding:1px 32px;
-  text-decoration:none;
-  text-shadow:0px 1px 0px #ffee66;
-}
-button:hover {
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffab23), color-stop(1, #ffff00));
-  background:-moz-linear-gradient(top, #ffab23 5%, #ffff00 100%);
-  background:-webkit-linear-gradient(top, #ffab23 5%, #ffff00 100%);
-  background:-o-linear-gradient(top, #ffab23 5%, #ffff00 100%);
-  background:-ms-linear-gradient(top, #ffab23 5%, #ffff00 100%);
-  background:linear-gradient(to bottom, #ffab23 5%, #ffff00 100%);
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab23', endColorstr='#ffff00',GradientType=0);
-  background-color:#ffab23;
+
+/* below is a fix for bootstrap-social.css You Tube issue
+/* cdn is loaded as link, update with fix when newer version comes out.
+*/
+
+.btn-youtube {
+  color: #fff;
+  background-color: #DC2725;
+  border-color: rgba(0, 0, 0, 0.2)
 }
 
-button:focus {
-  outline: none;
+.btn-youtube:hover,
+.btn-youtube:focus,
+.btn-youtube:active,
+.btn-youtube.active,
+.open>.dropdown-toggle.btn-youtube {
+  color: #fff;
+  background-color: #B21E1C;
+  border-color: rgba(0, 0, 0, 0.2)
 }
 
-#toolbar{
-  color:white;
-  line-height: 2em;
+.btn-youtube:active,
+.btn-youtube.active,
+.open>.dropdown-toggle.btn-youtube {
+  background-image: none
+}
+
+.btn-youtube.disabled,
+.btn-youtube[disabled],
+fieldset[disabled] .btn-youtube,
+.btn-youtube.disabled:hover,
+.btn-youtube[disabled]:hover,
+fieldset[disabled] .btn-youtube:hover,
+.btn-youtube.disabled:focus,
+.btn-youtube[disabled]:focus,
+fieldset[disabled] .btn-youtube:focus,
+.btn-youtube.disabled:active,
+.btn-youtube[disabled]:active,
+fieldset[disabled] .btn-youtube:active,
+.btn-youtube.disabled.active,
+.btn-youtube[disabled].active,
+fieldset[disabled] .btn-youtube.active {
+  background-color: #DC2725;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-youtube .badge {
+  color: #DC2725;
+  background-color: #fff
+}
+
+.btn-fa-fire {
+  color: #FFF;
+  background-color: #492C14;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-fa-fire:hover,
+.btn-fa-fire:focus,
+.btn-fa-fire:active,
+.btn-fa-fire.active {
+  color: #492C14;
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-fa-fire:active,
+.btn-fa-fire.active,
+.open>.dropdown-toggle.btn-fa-fire {
+  background-image: none
+}
+
+.btn-fa-fire.active {
+  background-color: #492C14;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-yelp {
+  color: #fff;
+  background-color: #C41200;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-yelp:hover,
+.btn-yelp:focus,
+.btn-yelp:active,
+.btn-yelp.active,
+.open>.dropdown-toggle.btn-yelp {
+  color: #C41200;
+  background-color: #fff;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-yelp:active,
+.btn-yelp.active,
+.open>.dropdown-toggle.btn-yelp {
+  background-image: none
+}
+
+.btn-yelp.active {
+  background-color: #C41200;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-codepen {
+  color: #FFF;
+  background-color: #000;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-codepen:hover,
+.btn-codepen:focus,
+.btn-codepen:active,
+.btn-codepen.active,
+.open>.dropdown-toggle.btn-codepen {
+  color: #000;
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-codepen:active,
+.btn-codepen.active,
+.open>.dropdown-toggle.btn-codepen {
+  background-image: none
+}
+
+.btn-codepen.active {
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-medium {
+  color: #FFF;
+  background-color: #000;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-medium:hover,
+.btn-medium:focus,
+.btn-medium:active,
+.btn-medium.active,
+.open>.dropdown-toggle.btn-medium {
+  color: #000;
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-medium:active,
+.btn-medium.active,
+.open>.dropdown-toggle.btn-medium {
+  background-image: none
+}
+
+.btn-medium.active {
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-vine {
+  color: #FFF;
+  background-color: #00B386;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-vine:hover,
+.btn-vine:focus,
+.btn-vine:active,
+.btn-vine.active,
+.open>.dropdown-toggle.btn-vine {
+  color: #00B386;
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-vine:active,
+.btn-vine.active,
+.open>.dropdown-toggle.btn-vine {
+  background-image: none
+}
+
+.btn-vine.active {
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-jsfiddle {
+  color: #FFF;
+  background-color: #4679A4;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-jsfiddle:hover,
+.btn-jsfiddle:focus,
+.btn-jsfiddle:active,
+.btn-jsfiddle.active,
+.open>.dropdown-toggle.btn-jsfiddle {
+  color: #4679A4;
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-jsfiddle:active,
+.btn-jsfiddle.active,
+.open>.dropdown-toggle.btn-jsfiddle {
+  background-image: none
+}
+
+.btn-jsfiddle.active {
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-stack-exchange {
+  color: #FFF;
+  background-color: #000;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-stack-exchange:hover,
+.btn-stack-exchange:focus,
+.btn-stack-exchange:active,
+.btn-stack-exchange.active,
+.open>.dropdown-toggle.btn-stack-exchange {
+  color: #000;
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-stack-exchange:active,
+.btn-stack-exchange.active,
+.open>.dropdown-toggle.btn-stack-exchange {
+  background-image: none
+}
+
+.btn-stack-exchange.active {
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-delicious {
+  color: #FFF;
+  background-color: #000;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-delicious:hover,
+.btn-delicious:focus,
+.btn-delicious:active,
+.btn-delicious.active,
+.open>.dropdown-toggle.btn-delicious {
+  color: #000;
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-delicious:active,
+.btn-delicious.active,
+.open>.dropdown-toggle.btn-delicious {
+  background-image: none
+}
+
+.btn-delicious.active {
+  background-color: #FFF;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+footer {
+    background: black;
+    height: 40px;
 }
