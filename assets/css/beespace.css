@@ -2,7 +2,7 @@
 
 There's no place like Comb.
 
-(C) Michael Lecke 2016, Code is under MIT license, Content is Creative Commons. */
+(C) Michael Lecke 2022, Code is under MIT license, Content is Creative Commons. */
 
 @import url(https://fonts.googleapis.com/css?family=Offside);
 
@@ -169,7 +169,6 @@ a.anchor {
   /* required for webkit browsers */
 }
 
-
 /* below is a fix for bootstrap-social.css You Tube issue
 /* cdn is loaded as link, update with fix when newer version comes out.
 */
@@ -220,28 +219,28 @@ fieldset[disabled] .btn-youtube.active {
   background-color: #fff
 }
 
-.btn-fa-fire {
+.btn-fa-free-code-camp {
   color: #FFF;
   background-color: #492C14;
   border-color: rgba(0, 0, 0, 0.2)
 }
 
-.btn-fa-fire:hover,
-.btn-fa-fire:focus,
-.btn-fa-fire:active,
-.btn-fa-fire.active {
+.btn-fa-free-code-camp:hover,
+.btn-fa-free-code-camp:focus,
+.btn-fa-free-code-camp:active,
+.btn-fa-free-code-camp.active {
   color: #492C14;
   background-color: #FFF;
   border-color: rgba(0, 0, 0, 0.2)
 }
 
-.btn-fa-fire:active,
-.btn-fa-fire.active,
+.btn-fa-free-code-camp:active,
+.btn-fa-free-code-camp.active,
 .open>.dropdown-toggle.btn-fa-fire {
   background-image: none
 }
 
-.btn-fa-fire.active {
+.btn-fa-free-code-camp.active {
   background-color: #492C14;
   border-color: rgba(0, 0, 0, 0.2)
 }
@@ -327,29 +326,29 @@ fieldset[disabled] .btn-youtube.active {
   border-color: rgba(0, 0, 0, 0.2)
 }
 
-.btn-vine {
+.btn-codewars {
   color: #FFF;
-  background-color: #00B386;
+  background-color: #b13621;
   border-color: rgba(0, 0, 0, 0.2)
 }
 
-.btn-vine:hover,
-.btn-vine:focus,
-.btn-vine:active,
-.btn-vine.active,
-.open>.dropdown-toggle.btn-vine {
-  color: #00B386;
+.btn-codewars:hover,
+.btn-codewars:focus,
+.btn-codewars:active,
+.btn-codewars.active,
+.open>.dropdown-toggle.btn-codewars {
+  color: #b13621;
   background-color: #FFF;
   border-color: rgba(0, 0, 0, 0.2)
 }
 
-.btn-vine:active,
-.btn-vine.active,
-.open>.dropdown-toggle.btn-vine {
+.btn-codewars:active,
+.btn-codewars.active,
+.open>.dropdown-toggle.btn-codewars {
   background-image: none
 }
 
-.btn-vine.active {
+.btn-codewars.active {
   background-color: #FFF;
   border-color: rgba(0, 0, 0, 0.2)
 }
@@ -434,6 +433,11 @@ fieldset[disabled] .btn-youtube.active {
   background-color: #FFF;
   border-color: rgba(0, 0, 0, 0.2)
 }
+
+.copyright {
+  color:goldenrod;
+  opacity: 0.45;
+  }
 
 footer {
     background: black;
